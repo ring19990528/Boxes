@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private EditText edlength;
     private EditText edwidth;
     private EditText edheight;
@@ -24,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
         float length = Float.parseFloat(edlength.getText().toString());
         float width = Float.parseFloat(edwidth.getText().toString());
         float height = Float.parseFloat(edheight.getText().toString());
-        if(length<=23 && width <= 14 && height <=13){
+        if(length <= 23 && width <= 14 && height <= 13){
             Intent intent = new Intent(this,ResultActivity.class);
             startActivity(intent);
-        }else if (length <=39.5 && width <= 27.5 && height <=23){
+        }else if (length <= 39.5 && width <=27.5 && height <= 23){
             Intent intent1 = new Intent(this,Result1Activity.class);
             startActivity(intent1);
         }
+    }
 
     }
-}
+
